@@ -1,0 +1,31 @@
+<div class="container"
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutGap="5px">
+
+<div fxFlex="20" style="text-align:center;">
+  <h3>ICC test rankings</h3>
+  <mat-card *ngFor="let ele of rankings.test">
+    {{ele.country}} - {{ele.rating}} 
+  </mat-card>
+</div>
+
+<div fxFlex="20" style="text-align:center;">
+  <h3>ICC odi rankings</h3>
+  <mat-card *ngFor="let ele of rankings.odi">
+    {{ele.country}} - {{ele.rating}} 
+  </mat-card>
+</div>
+
+<div fxFlex="20" style="text-align:center;">
+  <h3>ICC t20i rankings</h3>
+  <mat-card *ngFor="let ele of rankings.t20">
+    {{ele.country}} - {{ele.rating}} 
+  </mat-card>
+</div>
+
+<div fxFlex="20" style="text-align:center;">
+  <img src="https://www.espncricinfo.com/db/PICTURES/CMS/316500/316500.png">
+</div>
+</div>

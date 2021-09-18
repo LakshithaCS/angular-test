@@ -1,0 +1,83 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+  <div fxFlex>
+    <div>
+
+    <form #search = "ngForm" (ngSubmit)="onSubmit(search.value.name)">
+      <input matInput placeholder="Player" type="text" class="bar" name="name" required ngModel>
+      <button type="submit" class="but"><i class="fa fa-search"></i></button>
+    </form>
+      
+      <hr>
+    </div>
+  </div>
+</div>
+
+ <div class="container"
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutGap="5px">
+
+<div fxFlex="25" style="text-align:center;">
+  <mat-card *ngIf="player">
+  	<h3>{{player.name | uppercase}}<br></h3>
+    <img src="{{player.image}}">
+  </mat-card>
+</div>
+
+<div fxFlex="20" style="text-align:center;">
+  <mat-card *ngIf="player">
+    <h3>---------<br></h3>
+    <p>Matches : </p>
+    <p>Runs : </p>
+    <p>Average : </p>
+    <p>Strike rate : </p>
+    <p>Hundreds :</p>
+    <p>Fifties :</p>
+    <p>Wickets :</p>
+  </mat-card>
+</div>
+
+<div fxFlex="20" style="text-align:center;">
+  <mat-card *ngIf="player">
+    <h3>Test carrier<br></h3>
+    <p>{{player.test.matches}}</p>
+    <p>{{player.test.runs}}</p>
+    <p>{{player.test.average}}</p>
+    <p>{{player.test.sr}}</p>
+    <p>{{player.test.hundred}}</p>
+    <p>{{player.test.fifty}}</p>
+    <p>{{player.test.wickets}}</p>
+  </mat-card>
+</div>
+
+<div fxFlex="20" style="text-align:center;">
+  <mat-card *ngIf="player">
+    <h3>Odi carrier<br></h3>
+    <p>{{player.odi.matches}}</p>
+    <p>{{player.odi.runs}}</p>
+    <p>{{player.odi.average}}</p>
+    <p>{{player.odi.sr}}</p>
+    <p>{{player.odi.hundred}}</p>
+    <p>{{player.odi.fifty}}</p>
+    <p>{{player.odi.wickets}}</p>
+  </mat-card>
+</div>
+
+<div fxFlex="20" style="text-align:center;">
+  <mat-card *ngIf="player">
+    <h3>T20i carrier<br></h3>
+    <p>{{player.t20.matches}}</p>
+    <p>{{player.t20.runs}}</p>
+    <p>{{player.t20.average}}</p>
+    <p>{{player.t20.sr}}</p>
+    <p>{{player.t20.hundred}}</p>
+    <p>{{player.t20.fifty}}</p>
+    <p>{{player.t20.wickets}}</p>
+  </mat-card>
+</div>
+
+</div>
